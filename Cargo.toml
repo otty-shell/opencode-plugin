@@ -1,0 +1,30 @@
+[package]
+name = "otty-plugin-opencode"
+description = "The official OpenCode plugin of OTTY: the OpenCode agent part"
+readme = "README.md"
+version = "0.1.12"
+license = "Apache-2.0"
+publish = false
+edition = "2024"
+rust-version = "1.96.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+# The SDK comes from the `agents` branch of OTTY until OTTY tags a release
+# with it.
+otty-plugin-sdk = { git = "https://github.com/otty-shell/otty", branch = "agents" }
+serde_json = "1.0.149"
+
+[dev-dependencies]
+# Writes the made-up OpenCode databases of the tests, as OpenCode writes
+# its own; the version and features the SDK's test host reads them with.
+rusqlite = { version = "0.43.0", default-features = false, features = ["bundled"] }
+
+# Plugins are built for speed, not size (spec Decision 2).
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true
