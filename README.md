@@ -56,7 +56,7 @@ cargo --config 'patch."https://github.com/otty-shell/otty".otty-plugin-sdk.path=
 ## Install
 
 In OTTY, open Plugins mode, press **Add plugin…**, paste
-`https://github.com/otty-shell/otty-plugin-opencode`, then **Next** and
+`https://github.com/otty-shell/opencode-plugin`, then **Next** and
 **Install**. OTTY installs the newest release it can run and offers the
 later ones as updates.
 

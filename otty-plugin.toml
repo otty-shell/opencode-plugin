@@ -5,9 +5,9 @@
 [plugin]
 id = "opencode"
 name = "OpenCode"
-version = "0.1.12"
+version = "0.0.1"
 description = "OpenCode sessions and usage in OTTY."
-repository = "https://github.com/otty-shell/otty-plugin-opencode"
+repository = "https://github.com/otty-shell/opencode-plugin"
 license = "Apache-2.0"
 authors = ["OTTY team"]
 wasm = "opencode.wasm"
